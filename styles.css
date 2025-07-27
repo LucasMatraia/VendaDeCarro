@@ -1,49 +1,82 @@
-*{
- margin: 0;
- padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
 }
-  /*cor de fundo*/
- body{
-     height: 100%;
-     overflow-x: hidden;
-     overflow-y: scroll;
-   
-  background: linear-gradient(135deg, #a9794b , #0c0c0c,#9e9d9d)
- }
 
- /*logo*/
- 
- .logo{
-   height: 150px;
-     border: black;
-     display: block;
-     margin: 0 auto;
-     background-image:linear-gradient(#a9794b ,#0c0c0c ,#9e9d9d) ;
-     border-radius: 40%;
+/* cor de fundo */
+body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a9794b, #0c0c0c, #9e9d9d);
+}
 
-     /*carros*/
- }
-.porsche{
-    position: absolute;
-top: 60%;
-left: 50%;
-transform:translate(-50%, -50%);
+/* logo */
+.logo {
+  height: 150px;
+  border: black;
+  display: block;
+  margin: 0 auto;
+  background-image: linear-gradient(#a9794b, #0c0c0c, #9e9d9d);
+  border-radius: 40%;
+}
+
+/* carro */
+.porsche {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-7.5deg);
   z-index: 1;
-
+  
 }
-/*seta*/
-.seta{
 
+/* container das setas */
+.setas-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
 
-
+  button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
 
     
+  }
+
+
+  button:nth-child(1) img {
+    transform: scaleX(-1); 
+  }
 }
 
-
-.descricao-container{
-
-
+/* seta comum */
+.arrow-left,
+.arrow-right {
+  max-width: 100px;
+  height: auto;
+ 
+  
 }
 
+/* efeito ao passar o mouse */
+.arrow-left:hover,
+.arrow-right:hover {
+  filter: drop-shadow(0 0 8px gold);
+
+}
