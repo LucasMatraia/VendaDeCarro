@@ -21,13 +21,29 @@ box-sizing: border-box;
      margin: 0 auto;
      background-image:linear-gradient(#a9794b ,#0c0c0c ,#9e9d9d) ;
      border-radius: 40%;
-     
+
+     /*carros*/
  }
 .porsche{
     position: absolute;
 top: 60%;
 left: 50%;
 transform:translate(-50%, -50%);
-
   z-index: 1;
+
 }
+/*seta*/
+.seta{
+
+
+
+
+    
+}
+
+
+.descricao-container{
+
+
+}
+
