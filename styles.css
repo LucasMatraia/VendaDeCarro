@@ -1,4 +1,33 @@
+*{
+ margin: 0;
+ padding: 0;
+box-sizing: border-box;
+}
+  /*cor de fundo*/
+ body{
+     height: 100%;
+     overflow-x: hidden;
+     overflow-y: scroll;
+   
+  background: linear-gradient(135deg, #a9794b , #0c0c0c,#9e9d9d)
+ }
 
+ /*logo*/
+ 
+ .logo{
+   height: 150px;
+     border: black;
+     display: block;
+     margin: 0 auto;
+     background-image:linear-gradient(#a9794b ,#0c0c0c ,#9e9d9d) ;
+     border-radius: 90%;
+     
+ }
+.porsche{
+    position: absolute;
+top: 60%;
+left: 50%;
+transform:translate(-50%, -50%);
 
-
-
+  z-index: 1;
+}
