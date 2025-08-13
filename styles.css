@@ -105,3 +105,11 @@ margin-top: 70px;
   filter: drop-shadow(0 0 8px gold);
 
 }
+
+.navegador li {
+max-width: 100px;
+left: 50%;
+
+}
+
+
