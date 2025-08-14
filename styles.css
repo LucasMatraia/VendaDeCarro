@@ -22,7 +22,7 @@ body {
   margin: 0 auto;
   background-image: linear-gradient(#a9794b, #0c0c0c, #9e9d9d);
   border-radius: 40%;
-  
+ 
 }
 
 /* carro */
@@ -105,5 +105,10 @@ margin-top: 70px;
   filter: drop-shadow(0 0 8px gold);
 
 }
-
+.navegador{
+gap:20px;
+justify-items: center ;
+display: grid;
+margin: 0 auto;
+}
 
