@@ -4,16 +4,19 @@ body {/* cor de fundo */
   min-height: 100vh;
   background: linear-gradient(135deg, #a9794b, #0c0c0c, #9e9d9d);
   text-align: center;
+
+
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+ 
   
 }
 /* logo */
 .logo {
+  max-width: 100%;
   height: 100px;
   border: black;
   background-image: linear-gradient(#a9794b, #0c0c0c, #9e9d9d);
@@ -27,6 +30,7 @@ margin-right: auto;
 /* carro */
 .CarEvolution
  {
+  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +49,7 @@ margin-top: 70px;
 }
  .CarEvolution img {
       position: absolute;
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       object-fit: contain;
       display: none; /* todas somem */
@@ -92,7 +96,7 @@ margin-top: 70px;
 /* seta comum */
 .arrow-left,
 .arrow-right {
-  max-width: 100px;
+  max-width: 100%;
   height: auto;
  
   
@@ -105,6 +109,7 @@ margin-top: 70px;
 
 }
 #navegador ul {
+  max-width: 100%;
     display: flex; /* Habilita o alinhamento horizontal */
     justify-content: center; /* Centraliza os links no meio da barra */
     align-items: center; /* Alinha verticalmente */
@@ -122,15 +127,53 @@ margin-top: 70px;
  
   }
   #navegador ul li a{
+    flex-wrap: wrap;
+    
 text-decoration: none;
 color: #ffffff;
 font-weight: bold;
-font-size: 16px;
+font-size: 1rem;
 transition: color 0.3s, background-color 0.3s;
 border-radius: 4px
 }
 #navegador ul li a:hover{
 
-  color: #ffffff;
-  background-color: #007bff;
+  color: #000000;
+  background-color: gold ;
 }
+#navegador{
+
+  max-width: 100%;
+ background-color:transparent
+  padding: 10px 0;
+}
+
+#SaibaMais{
+color: #ffffff;
+font-weight: bold;
+ display: flex; 
+ margin-left: 20px;
+  
+ 
+}
+
+#SaibaMais button{
+
+text-decoration: none;
+color: #000000;
+background-color: gold;
+border-radius: 20px;
+font-weight: bold;
+font-size: 0.9rem;
+transition: color 0.3s, background-color 0.3s;
+}
+button{
+margin-left: auto;
+margin-right: auto;
+width: 170px;
+
+
+}
+
+
+
