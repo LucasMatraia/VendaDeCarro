@@ -6,8 +6,6 @@
 
 # 🚀 Meu Portfólio de Projetos Web
 
-<img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=80" alt="Capa Livro" width="100%">
-
 Bem-vindo ao meu repositório de estudos! Aqui organizo todos os projetos que venho desenvolvendo.
 
 ## 📁 Projetos Atuais
