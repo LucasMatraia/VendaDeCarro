@@ -1,0 +1,179 @@
+body {/* cor de fundo */
+
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a9794b, #0c0c0c, #9e9d9d);
+  text-align: center;
+
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+  
+}
+/* logo */
+.logo {
+  max-width: 100%;
+  height: 100px;
+  border: black;
+  background-image: linear-gradient(#a9794b, #0c0c0c, #9e9d9d);
+  border-radius: 40%;
+display: flex;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* carro */
+.CarEvolution
+ {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:600px;
+  height: 270px;
+  justify-content: center;
+display: flex;
+align-items: center;
+  transform: translate(-50%,-50%) rotate(-7.5deg);
+z-index: 1;
+margin-top: 70px;
+
+
+
+  
+}
+ .CarEvolution img {
+      position: absolute;
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none; /* todas somem */
+    }
+
+
+
+
+.CarEvolution img.active{
+  display: block;
+}
+
+
+/* container das setas */
+.setas-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  bottom: 45%;
+
+  button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+
+    
+  }
+
+
+  button:nth-child(1) img {
+    transform: scaleX(-1); 
+  }
+}
+
+/* seta comum */
+.arrow-left,
+.arrow-right {
+  max-width: 100%;
+  height: auto;
+ 
+  
+}
+
+/* efeito ao passar o mouse */
+.arrow-left:hover,
+.arrow-right:hover {
+  filter: drop-shadow(0 0 8px gold);
+
+}
+#navegador ul {
+  max-width: 100%;
+    display: flex; /* Habilita o alinhamento horizontal */
+    justify-content: center; /* Centraliza os links no meio da barra */
+    align-items: center; /* Alinha verticalmente */
+    list-style: none; /* Remove os pontos da lista */
+    margin: 0;
+    padding: 0;
+  gap:30px;
+
+  }
+  #navegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+ 
+  }
+  #navegador ul li a{
+    flex-wrap: wrap;
+    
+text-decoration: none;
+color: #ffffff;
+font-weight: bold;
+font-size: 1rem;
+transition: color 0.3s, background-color 0.3s;
+border-radius: 4px
+}
+#navegador ul li a:hover{
+
+  color: #000000;
+  background-color: gold ;
+}
+#navegador{
+
+  max-width: 100%;
+ background-color:transparent;
+  padding: 10px 0;
+}
+
+#SaibaMais{
+color: #ffffff;
+font-weight: bold;
+ display: flex; 
+ margin-left: 20px;
+  
+ 
+}
+
+#SaibaMais button{
+
+text-decoration: none;
+color: #000000;
+background-color: gold;
+border-radius: 20px;
+font-weight: bold;
+font-size: 0.9rem;
+transition: color 0.3s, background-color 0.3s;
+}
+button{
+margin-left: auto;
+margin-right: auto;
+width: 170px;
+
+
+}
+
+
+

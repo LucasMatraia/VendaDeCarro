@@ -1,0 +1,10 @@
+# === SISTEMA CLÍNICA VIDA+ ===
+pacientes = []
+
+def cadastrar_paciente():
+    nome = input('Nome do paciente: ')
+    idade = int(input('Idade: '))
+    telefone = input('Telefone: ')
+    pacientes.append({'nome': nome, 'idade': idade, 'telefone': telefone})
+    print('Paciente cadastrado com sucesso!')
+

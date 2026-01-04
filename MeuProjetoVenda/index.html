@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FP Sellection </title>
+   
+</head>
+
+<body>
+    <header>
+       <img class="logo"src="img/logo.png">
+      
+      <nav id="navegador">
+    <ul>
+    
+        <li>
+            <a href= "#">Home</a>
+        </li>
+         <li>
+            <a href="#">Serviços</a>
+        </li>
+         <li>
+            <a href="#">FaleConosco</a>
+        </li>
+         <li>
+            <a href="#">Contato</a>
+        </li>
+         <li>
+            <a href="#">Sobre</a>
+        </li>   
+        </nav>  
+
+<nav id="SaibaMais">
+
+ <p>Para tirar duvidas, clique no botão  saiba mais 
+ <button>Saiba Mais
+
+ 
+
+
+</ul>
+      </nav>
+    </nav>
+    </button>
+      </p>
+      </header>
+    
+  
+<main>
+  
+<div class="CarEvolution">
+<img src="img/1.png" class=" active" alt="Porsche Cinza">
+<img src="img/2.png" class="Ferrari"alt="Ferrari Vermelha">
+<img src="img/3.png"class="Lamborguini" alt="Lamborguini Amarela">
+</div>
+
+ 
+
+ </div>
+<div class="setas-container">
+    <button><img src="img/arrow-left.png" class="arrow-left"></button>
+ <button><img src="img/arrow-right.png" class="arrow-right"></button>
+
+
+</div>
+
+</main>
+<script>
+    // 1. Selecionando os botões e as imagens
+    // Note que usamos o seletor da imagem e pegamos o pai (button)
+    const btnProximo = document.querySelector('.arrow-right').closest('button');
+    const btnAnterior = document.querySelector('.arrow-left').closest('button');
+    const carros = document.querySelectorAll('.CarEvolution img');
+    
+    // Selecionando o botão Saiba Mais (adicionei a classe para facilitar)
+    const btnSaibaMais = document.querySelector('#SaibaMais button');
+
+    let indiceAtivo = 0;
+
+    // 2. Função para trocar a imagem
+    function trocarCarro(direcao) {
+        // Remove a classe 'active' do carro atual
+        carros[indiceAtivo].classList.remove('active');
+
+        if (direcao === 'proximo') {
+            indiceAtivo++;
+            if (indiceAtivo >= carros.length) indiceAtivo = 0; // Volta ao início
+        } else {
+            indiceAtivo--;
+            if (indiceAtivo < 0) indiceAtivo = carros.length - 1; // Vai ao último
+        }
+
+        // Adiciona a classe 'active' no novo carro
+        carros[indiceAtivo].classList.add('active');
+    }
+
+    // 3. Eventos de clique nas setas
+    btnProximo.onclick = () => trocarCarro('proximo');
+    btnAnterior.onclick = () => trocarCarro('anterior');
+
+    // 4. Evento do Botão WhatsApp
+    btnSaibaMais.onclick = () => {
+        const meuNumero = "5519971446032"; // Coloque seu número aqui
+        const texto = "Olá! Gostaria de mais informações sobre os carros da FP Sellection.";
+        const url = `https://wa.me/${meuNumero}?text=${encodeURIComponent(texto)}`;
+        window.open(url, '_blank');
+    };
+
+    console.log("Sistema carregado: " + carros.length + " carros encontrados.");
+</script>
+</body>
+</html>
+
+    
+                         
+            
