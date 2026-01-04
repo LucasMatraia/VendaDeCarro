@@ -1,0 +1,16 @@
+.fundo-legal {
+  background-color: #61dafb; /* Azul do React */
+  color: #282c34;            /* Cinza escuro */
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.5s;          /* Para a cor mudar suavemente */
+}
+
+.botao-colorido {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

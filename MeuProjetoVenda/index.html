@@ -1,119 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>FP Sellection </title>
-   
+    <title>FP Sellection</title>
+    <style>
+        /* CSS básico para você ver o resultado agora */
+        body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; }
+        .CarEvolution { position: relative; height: 300px; display: flex; justify-content: center; align-items: center; }
+        .CarEvolution img { display: none; width: 450px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .CarEvolution img.active { display: block; }
+        nav ul { display: flex; justify-content: center; list-style: none; gap: 20px; padding: 20px; }
+        nav a { color: #646cff; text-decoration: none; font-weight: bold; }
+        .setas-container { margin-top: 20px; }
+        button { cursor: pointer; padding: 10px 20px; border-radius: 5px; border: none; font-weight: bold; }
+        #SaibaMais button { background-color: #25d366; color: white; margin-left: 10px; }
+    </style>
 </head>
-
 <body>
     <header>
-       <img class="logo"src="img/logo.png">
+        <img class="logo" src="https://via.placeholder.com/150x50?text=FP+Sellection" alt="Logo">
       
-      <nav id="navegador">
-    <ul>
+        <nav id="navegador">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">FaleConosco</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li> 
+            </ul>
+        </nav>
+
+        <nav id="SaibaMais">
+            <p>Para tirar dúvidas, clique no botão saiba mais:
+                <button>Saiba Mais</button>
+            </p>
+        </nav>
+    </header>
     
-        <li>
-            <a href= "#">Home</a>
-        </li>
-         <li>
-            <a href="#">Serviços</a>
-        </li>
-         <li>
-            <a href="#">FaleConosco</a>
-        </li>
-         <li>
-            <a href="#">Contato</a>
-        </li>
-         <li>
-            <a href="#">Sobre</a>
-        </li>   
-        </nav>  
+    <main>
+        <div class="CarEvolution">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600" class="active" alt="Porsche Cinza">
+            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=600" alt="Ferrari Vermelha">
+            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600" alt="Lamborguini Amarela">
+        </div>
 
-<nav id="SaibaMais">
+        <div class="setas-container">
+            <button class="btn-seta arrow-left"> ⬅️ Anterior </button>
+            <button class="btn-seta arrow-right"> Próximo ➡️ </button>
+        </div>
+    </main>
 
- <p>Para tirar duvidas, clique no botão  saiba mais 
- <button>Saiba Mais
+    <script>
+        // Selecionando os botões e as imagens
+        const btnProximo = document.querySelector('.arrow-right');
+        const btnAnterior = document.querySelector('.arrow-left');
+        const carros = document.querySelectorAll('.CarEvolution img');
+        const btnSaibaMais = document.querySelector('#SaibaMais button');
 
- 
+        let indiceAtivo = 0;
 
+        function trocarCarro(direcao) {
+            carros[indiceAtivo].classList.remove('active');
 
-</ul>
-      </nav>
-    </nav>
-    </button>
-      </p>
-      </header>
-    
-  
-<main>
-  
-<div class="CarEvolution">
-<img src="img/1.png" class=" active" alt="Porsche Cinza">
-<img src="img/2.png" class="Ferrari"alt="Ferrari Vermelha">
-<img src="img/3.png"class="Lamborguini" alt="Lamborguini Amarela">
-</div>
+            if (direcao === 'proximo') {
+                indiceAtivo++;
+                if (indiceAtivo >= carros.length) indiceAtivo = 0;
+            } else {
+                indiceAtivo--;
+                if (indiceAtivo < 0) indiceAtivo = carros.length - 1;
+            }
 
- 
-
- </div>
-<div class="setas-container">
-    <button><img src="img/arrow-left.png" class="arrow-left"></button>
- <button><img src="img/arrow-right.png" class="arrow-right"></button>
-
-
-</div>
-
-</main>
-<script>
-    // 1. Selecionando os botões e as imagens
-    // Note que usamos o seletor da imagem e pegamos o pai (button)
-    const btnProximo = document.querySelector('.arrow-right').closest('button');
-    const btnAnterior = document.querySelector('.arrow-left').closest('button');
-    const carros = document.querySelectorAll('.CarEvolution img');
-    
-    // Selecionando o botão Saiba Mais (adicionei a classe para facilitar)
-    const btnSaibaMais = document.querySelector('#SaibaMais button');
-
-    let indiceAtivo = 0;
-
-    // 2. Função para trocar a imagem
-    function trocarCarro(direcao) {
-        // Remove a classe 'active' do carro atual
-        carros[indiceAtivo].classList.remove('active');
-
-        if (direcao === 'proximo') {
-            indiceAtivo++;
-            if (indiceAtivo >= carros.length) indiceAtivo = 0; // Volta ao início
-        } else {
-            indiceAtivo--;
-            if (indiceAtivo < 0) indiceAtivo = carros.length - 1; // Vai ao último
+            carros[indiceAtivo].classList.add('active');
         }
 
-        // Adiciona a classe 'active' no novo carro
-        carros[indiceAtivo].classList.add('active');
-    }
+        btnProximo.onclick = () => trocarCarro('proximo');
+        btnAnterior.onclick = () => trocarCarro('anterior');
 
-    // 3. Eventos de clique nas setas
-    btnProximo.onclick = () => trocarCarro('proximo');
-    btnAnterior.onclick = () => trocarCarro('anterior');
+        btnSaibaMais.onclick = () => {
+            const meuNumero = "5519971446032";
+            const texto = "Olá! Gostaria de mais informações sobre os carros da FP Sellection.";
+            const url = `https://wa.me/${meuNumero}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        };
 
-    // 4. Evento do Botão WhatsApp
-    btnSaibaMais.onclick = () => {
-        const meuNumero = "5519971446032"; // Coloque seu número aqui
-        const texto = "Olá! Gostaria de mais informações sobre os carros da FP Sellection.";
-        const url = `https://wa.me/${meuNumero}?text=${encodeURIComponent(texto)}`;
-        window.open(url, '_blank');
-    };
-
-    console.log("Sistema carregado: " + carros.length + " carros encontrados.");
-</script>
+        console.log("Sistema recuperado: " + carros.length + " carros encontrados.");
+    </script>
 </body>
 </html>
-
-    
-                         
-            
