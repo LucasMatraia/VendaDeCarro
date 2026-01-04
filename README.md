@@ -1,10 +1,6 @@
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" width="100%" />
-  <h1 align="center">📖 Meu Portfólio de Projetos Web</h1>
-</p>
-
 
 # 🚀 Meu Portfólio de Projetos Web
+<img src=<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" width="100%" />=crop" width="100%" />
 
 Bem-vindo ao meu repositório de estudos! Aqui organizo todos os projetos que venho desenvolvendo.
 
