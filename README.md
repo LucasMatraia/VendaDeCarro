@@ -17,7 +17,7 @@ Clique nos links abaixo para ver os sites funcionando em tempo real:
 * **🚗 Venda de Carros:** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/MeuProjetoVenda/)
 * **🎵 MusicWord (Player):** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/MusicWord/)
 * **🔵 Interface Facebook:** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/Projeto%20Facebook/)
-* **🎧 MusicWord (Cópia):** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/MusicWord%20-%20Copia/)
+
 * **🧪 Teste de Música:** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/MusicaTeste/)
 * **🚀 Projeto Rocketseat:** [Ver Site](https://lucasmatraia.github.io/MeusPortifolios/Projeto_rocketseat/)
 
