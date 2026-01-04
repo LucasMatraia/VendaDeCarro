@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" width="100%" />
+  <h1 align="center">📖 Meu Portfólio de Projetos Web</h1>
+</p>
+
+
 # 🚀 Meu Portfólio de Projetos Web
 
 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=80" alt="Capa Livro" width="100%">
